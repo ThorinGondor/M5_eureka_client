@@ -21,7 +21,7 @@ public class HelloServiceController {
      */
     @RequestMapping(value = "/hello1", method = RequestMethod.GET)
     public String hello(@RequestParam String name){
-        return "Hello! "+name+"\n";
+        return "Hello! "+name;
     }
 
     @RequestMapping(value = "/hello2", method = RequestMethod.GET)
@@ -31,6 +31,6 @@ public class HelloServiceController {
 
     @RequestMapping(value = "/hello3", method = RequestMethod.POST)
     public String hello(@RequestBody User user){
-        return "\nHello "+user.getName()+", "+user.getAge();
+        return "Hello "+user.getName()+", "+user.getAge();
     }
 }
